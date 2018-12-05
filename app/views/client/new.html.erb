@@ -1,0 +1,33 @@
+<h1>Novo cliente</h1>
+
+<%= form_for :client, :url => { :action => "create" } do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br /><br />
+
+  <%= f.label :endereco %>:
+  <%= f.text_field :endereco %><br /><br />
+
+  <%= f.label :cpf %>:
+  <%= f.text_field :cpf %><br /><br />
+
+  <%= f.label :rg %>:
+  <%= f.text_field :rg %><br /><br />
+
+  <%= f.label :phone %>:
+  <%= f.text_field :phone %><br /><br />
+
+  <%= f.label :data_cadastro %>:
+  <%= f.text_field :data_cadastro %><br /><br />
+
+  <%= f.label :data_cancelamento %>:
+  <%= f.text_field :data_cancelamento %><br /><br />
+
+  <%= f.label :debito %>:
+  <%= f.text_field :debito %><br /><br />
+
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Voltar a home", root_path %>
+<br><br>
+<%= link_to "Listar", client_show_path %>

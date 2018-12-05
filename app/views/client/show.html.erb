@@ -1,0 +1,48 @@
+<h1>Listando clientes</h1>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>CPF</th>
+    <th>RG</th>
+    <th>Telefone</th>
+    <th>Data cadastro</th>
+    <th>Data cancelamento</th>
+    <th>Debito</th>
+  </tr>
+  <% @client.each do |client| %>
+    <tr>
+      <td><%= client.id %></td>
+      <td><%= client.name %></td>
+      <td><%= client.endereco %></td>
+      <td><%= client.cpf %></td>
+      <td><%= client.rg %></td>
+      <td><%= client.phone %></td>
+      <td><%= client.data_cadastro %></td>
+      <td><%= client.data_cancelamento %></td>
+      <td><%= client.debito %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to "Voltar a home", root_path %>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
